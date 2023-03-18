@@ -1,4 +1,5 @@
-import "../css/style.css";
+
+import "../css/base.scss";
 import javascriptLogo from "../images/javascript.svg";
 import viteLogo from "../images/vite.svg";
 import { setupCounter } from "./counter.js";
