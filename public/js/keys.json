@@ -1,0 +1,28 @@
+{
+  "keys": [
+    {
+      "id": "1",
+      "indiceText": "1",
+      "indiceImage": "indiceImage1.svg",
+      "type": "MMI"
+    },
+    {
+      "id": "2",
+      "indiceText": "2",
+      "indiceImage": "indiceImage2.svg",
+      "type": "MMI"
+    },
+    {
+      "id": "3",
+      "indiceText": "3",
+      "indiceImage": "indiceImage3.svg",
+      "type": "IUT"
+    },
+    {
+      "id": "4",
+      "indiceText": "4",
+      "indiceImage": "indiceImage4.svg",
+      "type": "Crous"
+    }
+  ]
+}
