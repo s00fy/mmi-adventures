@@ -1,5 +1,4 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
@@ -19,7 +18,14 @@ a {
 h1 {
   font-size: 2rem;
 }
-
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./../images/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .section {
   width: 100vw;
   height: 100vh;

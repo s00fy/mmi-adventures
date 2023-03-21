@@ -1,28 +1,53 @@
 {
-  "keys": [
+  "MMIkeys": [
     {
       "id": "1",
       "indiceText": "1",
-      "indiceImage": "indiceImage1.svg",
-      "type": "MMI"
+      "indiceImage": "indiceImage1.svg"
     },
     {
       "id": "2",
       "indiceText": "2",
-      "indiceImage": "indiceImage2.svg",
-      "type": "MMI"
+      "indiceImage": "indiceImage2.svg"
     },
     {
       "id": "3",
       "indiceText": "3",
-      "indiceImage": "indiceImage3.svg",
-      "type": "IUT"
+      "indiceImage": "indiceImage3.svg"
     },
     {
       "id": "4",
       "indiceText": "4",
-      "indiceImage": "indiceImage4.svg",
-      "type": "Crous"
+      "indiceImage": "indiceImage4.svg"
+    }
+  ],
+  "IUTkeys": [
+    {
+      "id": "1",
+      "indiceText": "1",
+      "indiceImage": "indiceImage1.svg"
+    },
+    {
+      "id": "2",
+      "indiceText": "2",
+      "indiceImage": "indiceImage2.svg"
+    },
+    {
+      "id": "3",
+      "indiceText": "3",
+      "indiceImage": "indiceImage3.svg"
+    },
+    {
+      "id": "4",
+      "indiceText": "4",
+      "indiceImage": "indiceImage4.svg"
+    }
+  ],
+  "Crouskey": [
+    {
+      "id": "1",
+      "indiceText": "1",
+      "indiceImage": "indiceImage1.svg"
     }
   ]
 }
