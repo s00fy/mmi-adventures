@@ -10,16 +10,26 @@
   <body>
     <section class="section">
       <h1 class="section--title">MMI Adventures</h1>
-      <div class="section__main">
+      <div class="section__main" id="index">
         <picture class="section__main--img">
           <img src="./assets/images/logo.png" alt="" />
         </picture>
-        <h2 class="section__main--text">Une aventure interactive</h2>
+        <h2 class="section__main--title">Une aventure interactive</h2>
         <button id="askButton" class="section__main--button" onclick="readTag()">Commencer</button>
+      </div>
+      <div class="section__main" id="rules" style="display: none">
+        <h2>Pour cette aventure, activez les NFC.</h2>
+        <p class="section__main--text">Dans cette folle aventure, vous devrez chercher 8 clés dans le vaste monde de l’IUT d’Angoulême.</p>
+        <p class="section__main--text">Afin de trouver les clés, vous aurez un indices.</p>
+        <p class="section__main--text">A quoi ressemble les clés ?</p>
+        <picture class="section__main--img2">
+          <img src="./assets/images/logo.png" alt="" />
+        </picture>
+        <a href="./assets/pages/test.html" class="section__main--button">Démarrer</a>
       </div>
       <div></div>
     </section>
-    <div class="test">
+    <div class="keys">
       <p></p>
     </div>
     <script src="/main.js"></script>
