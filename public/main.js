@@ -43,7 +43,7 @@ async function readTag() {
 
 //Génération des 5 clés à trouver dans le batiment MMI
 
-var MMInums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var MMInums = [1, 2, 3, 4, 5, 6, 7, 8];
 var gen_nums = [];
 
 function in_array(array, el) {
@@ -52,7 +52,7 @@ function in_array(array, el) {
 }
 
 function get_rand(array) {
-  var rand = array[Math.floor(Math.random() * 9)];
+  var rand = array[Math.floor(Math.random() * 8)];
   if (!in_array(gen_nums, rand)) {
     gen_nums.push(rand);
     return rand;
