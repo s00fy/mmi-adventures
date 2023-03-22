@@ -1,53 +1,64 @@
 {
-  "MMIkeys": [
+  "keys": [
     {
       "id": "1",
-      "indiceText": "1",
-      "indiceImage": "indiceImage1.svg"
+      "indiceText": "1"
     },
     {
       "id": "2",
-      "indiceText": "2",
-      "indiceImage": "indiceImage2.svg"
+      "indiceText": "2"
     },
     {
       "id": "3",
-      "indiceText": "3",
-      "indiceImage": "indiceImage3.svg"
+      "indiceText": "3"
     },
     {
       "id": "4",
-      "indiceText": "4",
-      "indiceImage": "indiceImage4.svg"
-    }
-  ],
-  "IUTkeys": [
-    {
-      "id": "1",
-      "indiceText": "1",
-      "indiceImage": "indiceImage1.svg"
+      "indiceText": "4"
     },
     {
-      "id": "2",
-      "indiceText": "2",
-      "indiceImage": "indiceImage2.svg"
+      "id": "5",
+      "indiceText": "5"
     },
     {
-      "id": "3",
-      "indiceText": "3",
-      "indiceImage": "indiceImage3.svg"
+      "id": "6",
+      "indiceText": "6"
     },
     {
-      "id": "4",
-      "indiceText": "4",
-      "indiceImage": "indiceImage4.svg"
-    }
-  ],
-  "Crouskey": [
+      "id": "7",
+      "indiceText": "7"
+    },
     {
-      "id": "1",
-      "indiceText": "1",
-      "indiceImage": "indiceImage1.svg"
+      "id": "8",
+      "indiceText": "8"
+    },
+    {
+      "id": "9",
+      "indiceText": "9"
+    },
+    {
+      "id": "10",
+      "indiceText": "10"
+    },
+    {
+      "id": "11",
+      "indiceText": "11"
+    },
+    {
+      "id": "12",
+      "indiceText": "12"
+    },
+    {
+      "id": "13",
+      "indiceText": "13"
+    },
+    {
+      "id": "14",
+      "indiceText": "14"
+    },
+    {
+      "id": "15",
+      "indiceText": "15"
     }
   ]
 }
