@@ -1,4 +1,4 @@
-var MMInums = [1, 2, 3, 4, 5];
+var IUTnums = [1, 2, 3, 4, 5];
 var gen_nums = [];
 
 function in_array(array, el) {
@@ -16,5 +16,5 @@ function get_rand(array) {
 }
 
 for (var i = 0; i < 3; i++) {
-  console.log("IUT " + get_rand(MMInums));
+  console.log("IUT " + get_rand(IUTnums));
 }
