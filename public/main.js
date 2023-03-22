@@ -3,7 +3,7 @@ if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition(function (location) {
       appendLocation(location, "fetched");
     });
-    watchId = navigator.geolocation.watchPosition(appendLocation);
+    // watchId = navigator.geolocation.watchPosition(appendLocation);
   });
 }
 async function readTag() {
