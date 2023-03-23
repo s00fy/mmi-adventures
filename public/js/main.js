@@ -1,13 +1,17 @@
 const index = document.getElementById("index");
 const rules = document.getElementById("rules");
+const keysSection = document.getElementById("key");
+const nextButton = document.getElementById("nextButton");
+const nextKey = document.getElementById("nextKey");
 const scanButton = document.getElementById("readTag");
+const keysNums = document.querySelector(".keys");
 document.getElementById("askButton").addEventListener("click", function () {
   index.style.display = "none";
   rules.style.display = "flex";
 });
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function (location) {
-    appendLocation(location, "fetched");
+    // appendLocation(location, "fetched");
   });
 
   // watchId = navigator.geolocation.watchPosition(appendLocation);
@@ -33,27 +37,6 @@ scanButton.addEventListener("click", async () => {
   }
 });
 
-// async function readTag() {
-//   if ("NDEFReader" in window) {
-//     const ndef = new NDEFReader();
-//     try {
-//       await ndef.scan();
-//       ndef.onreading = (event) => {
-//         const decoder = new TextDecoder();
-//         for (const record of event.message.records) {
-//           console.log("Record type:  " + record.recordType);
-//           console.log("MIME type:    " + record.mediaType);
-//           console.log("=== data ===\n" + decoder.decode(record.data));
-//         }
-//       };
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   } else {
-//     console.log("Web NFC is not supported.");
-//   }
-// }
-
 //Génération des 5 clés à trouver dans le batiment MMI
 
 var MMInums = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -74,5 +57,12 @@ function get_rand(array) {
 }
 
 for (var i = 0; i < 5; i++) {
-  console.log("MMI " + get_rand(MMInums));
+  keysNums.innerHTML += "<p>" + get_rand(MMInums) + "</p>";
+  // console.log("MMI " + get_rand(MMInums));
 }
+
+nextButton.addEventListener("click", function () {
+  rules.style.display = "none";
+  keysSection.style.display = "flex";
+});
+

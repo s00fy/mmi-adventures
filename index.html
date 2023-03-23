@@ -2,38 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/images/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./assets/images/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/base.scss" />
     <title>MMI Adventures</title>
   </head>
   <body>
-    <section class="section">
-      <h1 class="section--title">MMI Adventures</h1>
-      <div class="section__main" id="index">
-        <picture class="section__main--img">
+    <header class="header">
+      <h1 class="header--title">MMI Adventures</h1>
+    </header>
+    <section class="index">
+      <div class="index__main" id="index">
+        <picture class="index__main--img">
           <img src="./assets/images/logo.png" alt="" />
         </picture>
-        <h2 class="section__main--title">Une aventure interactive</h2>
-        <button id="askButton" class="section__main--button">Commencer</button>
+        <h2 class="index__main--title">Une aventure interactive</h2>
+        <button id="askButton" class="index__main--button">Commencer</button>
       </div>
-      <div class="section__main" id="rules" style="display: none">
+      <div class="index__main" id="rules" style="display: none">
         <h2>Pour cette aventure, activez les NFC.</h2>
-        <button class="section__main--button" id="readTag">Activer</button>
-        <p class="section__main--text">Dans cette folle aventure, vous devrez chercher 8 clés dans le vaste monde de l’IUT d’Angoulême.</p>
-        <p class="section__main--text">Afin de trouver les clés, vous aurez un indices.</p>
-        <p class="section__main--text">A quoi ressemble les clés ?</p>
-        <picture class="section__main--img2">
+        <button class="index__main--button" id="readTag">Activer</button>
+        <p class="index__main--text">Dans cette folle aventure, vous devrez chercher 8 clés dans le vaste monde de l’IUT d’Angoulême.</p>
+        <p class="index__main--text">Afin de trouver les clés, vous aurez un indices.</p>
+        <p class="index__main--text">A quoi ressemble les clés ?</p>
+        <picture class="index__main--img2">
           <img src="./assets/images/logo.png" alt="" />
         </picture>
-        <a href="/pages/test.html" class="section__main--button">Démarrer</a>
+        <button class="index__main--button" id="nextButton">Démarrer</button>
+      </div>
+      <div id="key" class="index__key">
+        <p class="testKeyID"></p>
+        <button id="nextKey" class="index__main--button">Clé suivante</button>
       </div>
       <div></div>
     </section>
-    <div class="keys">
-      <p></p>
-    </div>
-    <script src="/main.js"></script>
-    <script src="/main2.js"></script>
+
+    <div class="keys" style="display: none"></div>
+    <script src="/js/main.js"></script>
+    <script src="/js/main2.js"></script>
   </body>
 </html>
