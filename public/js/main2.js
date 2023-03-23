@@ -19,6 +19,7 @@ function get_rand(array) {
 for (var i = 0; i < 3; i++) {
   keysNums.innerHTML += "<p>" + get_rand(IUTnums) + "</p>";
 }
+keysNums.innerHTML += "<p>14</p>";
 const keyID = document.querySelector(".testKeyID");
 const keysChilds = keysNums.querySelectorAll(":nth-child(n)");
 
@@ -31,5 +32,9 @@ const keyTest = document.querySelector(".testKeyID");
 nextKey.addEventListener("click", () => {
   const keysChildSuivant = keysChilds[indexKey++ % keysChilds.length];
   console.log(keysChildSuivant.textContent);
+  console.log(indexKey);
   keyTest.innerText = keysChildSuivant.textContent;
+  if (indexKey >= 9) {
+    nextKey.disabled = true;
+  }
 });
