@@ -1,10 +1,14 @@
-const index = document.getElementById("index");
-const rules = document.getElementById("rules");
-const keysSection = document.getElementById("key");
-const nextButton = document.getElementById("nextButton");
-const nextKey = document.getElementById("nextKey");
-const scanButton = document.getElementById("readTag");
-const keysNums = document.querySelector(".keys");
+// Initialisation des constantes
+
+const index = document.getElementById("index"); // recuperer la div "index"
+const rules = document.getElementById("rules"); // recuperer la div "rules"
+const keysSection = document.getElementById("key"); // recuperer la section "key"
+const nextButton = document.getElementById("nextButton"); // recuperer le bouton permettant d'acceder à l'espace des clés
+const nextKey = document.getElementById("nextKey"); // recuperer le bouton permettant d'acceder à la clé suivante
+const scanButton = document.getElementById("readTag"); // bouton permettant d'accepter le lire les tags NFC
+const keysNums = document.querySelector(".keys"); // div permettant de stocker tous les ID de clé
+
+// script permettant d'activer la géolocalisation
 document.getElementById("askButton").addEventListener("click", function () {
   index.style.display = "none";
   rules.style.display = "flex";
@@ -16,6 +20,8 @@ if ("geolocation" in navigator) {
 
   // watchId = navigator.geolocation.watchPosition(appendLocation);
 }
+
+// script permettant d'acceder à la lecture des tags NFC
 scanButton.addEventListener("click", async () => {
   console.log("User clicked scan button");
 
@@ -37,8 +43,7 @@ scanButton.addEventListener("click", async () => {
   }
 });
 
-//Génération des 5 clés à trouver dans le batiment MMI
-
+//Génération des 5 clés (aléatoire sur les 8 existantes) à trouver dans le batiment MMI
 var MMInums = [0, 1, 2, 3, 4, 5, 6, 7];
 var gen_nums = [];
 
@@ -61,6 +66,7 @@ for (var i = 0; i < 5; i++) {
   // console.log("MMI " + get_rand(MMInums));
 }
 
+// script permettant d'accéder à la section des clés
 nextButton.addEventListener("click", function () {
   rules.style.display = "none";
   keysSection.style.display = "flex";
