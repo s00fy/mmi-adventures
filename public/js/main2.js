@@ -1,4 +1,4 @@
-var IUTnums = [9, 10, 11, 12, 13];
+var IUTnums = [8, 9, 10, 11, 12];
 const MAX_KEYS = 3;
 var gen_nums = [];
 
@@ -19,7 +19,7 @@ function get_rand(array) {
 for (var i = 0; i < 3; i++) {
   keysNums.innerHTML += "<p>" + get_rand(IUTnums) + "</p>";
 }
-keysNums.innerHTML += "<p>14</p>";
+keysNums.innerHTML += "<p>13</p>";
 const keyID = document.querySelector(".testKeyID");
 const keysChilds = keysNums.querySelectorAll(":nth-child(n)");
 
@@ -31,9 +31,19 @@ let indexKey = 0;
 const keyTest = document.querySelector(".testKeyID");
 nextKey.addEventListener("click", () => {
   const keysChildSuivant = keysChilds[indexKey++ % keysChilds.length];
-  console.log(keysChildSuivant.textContent);
-  console.log(indexKey);
-  keyTest.innerText = keysChildSuivant.textContent;
+  // keyTest.innerText = keysChildSuivant.textContent;
+  fetch("./js/keys.json")
+    .then((response) => response.json())
+    .then((data) => {
+      // Les données JSON sont maintenant converties en un objet JavaScript
+      const idValue = data.keys[keysChildSuivant.textContent].id;
+      const textValue = data.keys[keysChildSuivant.textContent].indiceText;
+      console.log(idValue);
+      console.log(textValue);
+      // Manipuler les données ici...
+      keyTest.innerText = textValue;
+    });
+
   if (indexKey >= 9) {
     nextKey.disabled = true;
   }

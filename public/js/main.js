@@ -39,7 +39,7 @@ scanButton.addEventListener("click", async () => {
 
 //Génération des 5 clés à trouver dans le batiment MMI
 
-var MMInums = [1, 2, 3, 4, 5, 6, 7, 8];
+var MMInums = [0, 1, 2, 3, 4, 5, 6, 7];
 var gen_nums = [];
 
 function in_array(array, el) {
@@ -65,4 +65,3 @@ nextButton.addEventListener("click", function () {
   rules.style.display = "none";
   keysSection.style.display = "flex";
 });
-
