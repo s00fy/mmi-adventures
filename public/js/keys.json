@@ -2,7 +2,8 @@
   "keys": [
     {
       "id": "1",
-      "indiceText": "texte 1"
+      "indiceText": "texte 1",
+      "image": ""
     },
     {
       "id": "2",
