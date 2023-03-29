@@ -40,14 +40,20 @@ nextKey.addEventListener("click", () => {
     .then((response) => response.json())
     .then((data) => {
       // Les données JSON sont converties objet JavaScript
-      // const idValue = data.keys[keysChildSuivant.textContent].id;
-      const textValue = data.keys[keysChildSuivant.textContent].indiceText;
-      const imageValue = data.keys[keysChildSuivant.textContent].image;
-      // Les données sont injecter dans le HTML
-      keyID.innerText = indexKey;
-      keyText.innerText = textValue;
-      keyImage.src = imageValue;
-      keyCount.innerHTML = indexKey - 1;
+      const idValue = data.keys[keysChildSuivant.textContent].id;
+      const keyNFC = decoder.decode(record.data);
+      if ((keyNFC = idValue)) {
+        console.log("C'est la bonne clé");
+      } else {
+        console.log("Ce n'est pas la bonne clé");
+      }
+      // const textValue = data.keys[keysChildSuivant.textContent].indiceText;
+      // const imageValue = data.keys[keysChildSuivant.textContent].image;
+      // // Les données sont injecter dans le HTML
+      // keyID.innerText = indexKey;
+      // keyText.innerText = textValue;
+      // keyImage.src = imageValue;
+      // keyCount.innerHTML = indexKey - 1;
     });
   // permet de désactiver le bouton lors de la dernière clé, permet
   if (indexKey >= 9) {
