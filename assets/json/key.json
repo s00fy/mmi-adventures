@@ -1,0 +1,74 @@
+{
+  "keys": [
+    {
+      "id": "1",
+      "indiceText": "Cette salle va vous aider à trouver un Jobs",
+      "image": "./assets/images/pixel-pomme.svg"
+    },
+    {
+      "id": "2",
+      "indiceText": " Afin de faire une blague au prof, essayez Alt + F4",
+      "image": "./assets/images/pixel-chess.svg"
+    },
+    {
+      "id": "3",
+      "indiceText": "On vous souhaite la bienvenue dans le grand bain",
+      "image": "./assets/images/pixel-fish.svg"
+    },
+    {
+      "id": "4",
+      "indiceText": "Si vous avez du temps libre, cette salle est pour vous",
+      "image": "./assets/images/pixel-imprimante"
+    },
+    {
+      "id": "5",
+      "indiceText": "L’endroit vous allez découvrir la magie du montage",
+      "image": "./assets/images/pixel-montage.svg"
+    },
+    {
+      "id": "6",
+      "indiceText": "Silence ça tourne",
+      "image": "./assets/images/pixel-green.svg"
+    },
+    {
+      "id": "7",
+      "indiceText": "Pour l’utiliser , ce n’est pas obligé d’avoir fait top chef",
+      "image": "./assets/images/pixel-micro-ondes.svg"
+    },
+    {
+      "id": "8",
+      "indiceText": "Un mars et ça repart",
+      "image": "./assets/images/pixel-cafe.svg"
+    },
+    {
+      "id": "9",
+      "indiceText": "Un livre n’a jamais tué personne",
+      "image": "./assets/images/pixel-biblio.webp"
+    },
+    {
+      "id": "10",
+      "indiceText": "Il n’y a pas que des pansements",
+      "image": "./assets/images/pixel-heal.svg"
+    },
+    {
+      "id": "11",
+      "indiceText": "Personne y va mais il a le mérite d’exister",
+      "image": "./assets/images/pixel-foyer.svg"
+    },
+    {
+      "id": "12",
+      "indiceText": "C'est le plus grand de l’iut et aussi le plus loin pour mmi",
+      "image": "./assets/images/pixel-amphi.svg"
+    },
+    {
+      "id": "13",
+      "indiceText": "Un peu de sport pour nos geeks",
+      "image": "./assets/images/pixel-ballon.svg"
+    },
+    {
+      "id": "14",
+      "indiceText": "Ce lieu à été approuvé par Philippe Etchebest",
+      "image": "./assets/images/pixel-etchbest.svg"
+    }
+  ]
+}
