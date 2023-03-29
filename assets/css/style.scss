@@ -1,0 +1,143 @@
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2rem;
+}
+body {
+  overflow-x: hidden;
+  max-width: 99vw;
+  height: 100vh;
+  // background-image: url(./../images/background.png);
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center;
+}
+.header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+.header--title {
+  text-align: center;
+  width: 80%;
+}
+main {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.home,
+.rules,
+.keys {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.2s;
+}
+.home_image img,
+.rules_image img,
+.key__main--picture img {
+  width: 150px;
+  height: auto;
+  margin-block: 20px;
+}
+.home_title {
+  width: 80%;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.home_button,
+.rules_button,
+.key__main--button {
+  cursor: pointer;
+  color: black;
+  padding: 10px 15px;
+  background-image: url(./../images/pixel-button.svg);
+  background-size: cover;
+  width: auto;
+  font-family: "Retro Gaming";
+  border: none;
+  width: 205px;
+  height: 50px;
+  font-size: 22px;
+  background-color: transparent;
+  transition: 0.2s;
+}
+.rules_text {
+  width: 90%;
+  text-align: left;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.rules h2 {
+  margin-bottom: 10px;
+}
+.index__key {
+  width: 100vw;
+  height: 100vw;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.keys:nth-child(1) {
+  display: block;
+}
+
+.key {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.key__footer {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+}
+.key__main--picture {
+  display: flex;
+  justify-content: center;
+}
+.pixel-key {
+  height: fit-content;
+  width: 40px;
+}
+.center {
+  text-align: center;
+}
+// .key__main{
+//   width: 80%;
+// }
+.key__main--distance {
+  font-size: 0.9375rem;
+  font-weight: lighter;
+  margin-bottom: 10px;
+  span {
+    font-weight: bold;
+  }
+}
+.key__main--text {
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+.grey {
+  background-image: grey;
+  color: red;
+}

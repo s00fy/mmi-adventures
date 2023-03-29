@@ -2,23 +2,56 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/images/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./assets/images/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./public/css/base.scss" />
+    <link rel="stylesheet" href="./assets/css/base.scss" />
     <title>MMI Adventures</title>
   </head>
   <body>
-    <section class="section">
-      <h1 class="section--title">MMI Adventures</h1>
-      <div class="section__main">
-        <picture class="section__main--img">
-          <img src="./public/images/logo.png" alt="" />
+    <header class="header">
+      <h1 class="header--title">MMI Adventures</h1>
+    </header>
+    <main>
+      <section class="home">
+        <picture class="home_image" id="home">
+          <img src="./assets/images/logo.png" alt="" />
         </picture>
-        <h2 class="section__main--text">Une aventure interactive</h2>
-        <button id="askButton" class="section__main--button">Commencer</button>
-      </div>
-      <div></div>
-    </section>
-    <script src="./public/js/main.js"></script>
+        <h2 class="home_title">Une aventure interactive</h2>
+        <button id="askButton" class="home_button">Commencer</button>
+      </section>
+      <section class="rules" style="display: none">
+        <h2>Pour cette aventure, activez les NFC.</h2>
+        <button class="rules_button" id="readTag">Activer</button>
+        <p class="rules_text">Dans cette folle aventure, vous devrez chercher 8 clés dans le vaste monde de l’IUT d’Angoulême.</p>
+        <p class="rules_text">Afin de trouver les clés, vous aurez un indices.</p>
+        <p class="rules_text">A quoi ressemble les clés ?</p>
+        <picture class="rules_image">
+          <img src="./assets/images/logo.png" alt="" />
+        </picture>
+        <button id="nextButton" class="rules_button">Démarrer</button>
+      </section>
+      <section class="key" id="key" style="display: none">
+        <div class="key__main">
+          <h2 class="key__main--number">Clé numéro <span class="indiceID">0</span> :</h2>
+          <p class="key__main--text">Cliquez sur "clé suivante" pour démarrer</p>
+          <h2 class="key__main--indication">Indice :</h2>
+          <picture class="key__main--picture">
+            <img src="" alt="" class="indiceImage"/>
+          </picture>
+          <div class="center">
+            <h3 class="key__main--distance">Vous êtes à <span>20 mètres<span></h3>
+            <button id="nextKey" class="key__main--button">Clé suivante</button>
+          </div>
+        </div>
+        <div class="key__footer">
+          <p class="key__footer--text">0</p>
+          <picture class="key__footer--key"><img src="./assets/images/pixel-key.svg" alt="" class="pixel-key" /></picture>
+          <p>/8</p>
+        </div>
+      </section>
+    </main>
+    <footer class="keys" style="display: none"></footer>
+    <script src="/js/main.js"></script>
+    <script src="/js/main2.js"></script>
   </body>
 </html>
