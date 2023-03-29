@@ -4,11 +4,6 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
 }
 
 a {
@@ -19,7 +14,8 @@ h1 {
   font-size: 2rem;
 }
 body {
-  width: 100vw;
+  overflow-x: hidden;
+  max-width: 99vw;
   height: 100vh;
   // background-image: url(./../images/background.png);
   // background-size: cover;
@@ -30,60 +26,68 @@ body {
   width: 100vw;
   display: flex;
   justify-content: center;
-  padding-top: 50px;
+  margin-top: 35px;
 }
 .header--title {
   text-align: center;
   width: 80%;
 }
-.index {
+main {
   width: 100vw;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
-.index__main {
+.home,
+.rules,
+.keys {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: 0.2s;
-  .index__main--img img {
-    width: 150px;
-    height: auto;
-  }
-  .index__main--img2 img {
-    width: 150px;
-    height: auto;
-    margin-block: 20px;
-  }
-  .index__main--title {
-    width: 80%;
-    font-size: 2rem;
-    margin-bottom: 30px;
-    margin-top: 30px;
-  }
-  .index__main--text {
-    width: 90%;
-    text-align: left;
-    margin-top: 20px;
-  }
-  .index__main--button {
-    cursor: pointer;
-    color: black;
-    padding: 10px 15px;
-    background-image: url(./../images/pixel-button.svg);
-    background-size: cover;
-    width: auto;
-    font-family: "Retro Gaming";
-    border: none;
-    width: 205px;
-    height: 50px;
-    font-size: 22px;
-    background-color: transparent;
-    transition: 0.2s;
-  }
+}
+.home_image img,
+.rules_image img,
+.key__main--picture img {
+  width: 150px;
+  height: auto;
+  margin-block: 20px;
+}
+.home_title {
+  width: 80%;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.home_button,
+.rules_button,
+.key__main--button {
+  cursor: pointer;
+  color: black;
+  padding: 10px 15px;
+  background-image: url(./../images/pixel-button.svg);
+  background-size: cover;
+  width: auto;
+  font-family: "Retro Gaming";
+  border: none;
+  width: 205px;
+  height: 50px;
+  font-size: 22px;
+  background-color: transparent;
+  transition: 0.2s;
+}
+.rules_text {
+  width: 90%;
+  text-align: left;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.rules h2 {
+  margin-bottom: 10px;
 }
 .index__key {
   width: 100vw;
@@ -95,15 +99,45 @@ body {
 .keys:nth-child(1) {
   display: block;
 }
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+
+.key {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.key__footer {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+}
+.key__main--picture {
+  display: flex;
+  justify-content: center;
+}
+.pixel-key {
+  height: fit-content;
+  width: 40px;
+}
+.center {
+  text-align: center;
+}
+// .key__main{
+//   width: 80%;
+// }
+.key__main--distance {
+  font-size: 0.9375rem;
+  font-weight: lighter;
+  margin-bottom: 10px;
+  span {
+    font-weight: bold;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+}
+.key__main--text {
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+.grey {
+  background-image: grey;
+  color: red;
 }

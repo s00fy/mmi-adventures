@@ -28,8 +28,10 @@ keysChilds.forEach((keyChild) => {
 });
 
 let indexKey = 0;
-const keyTest = document.querySelector(".testKeyID"); // constante pour rentrer la description d'une clé
-
+const keyID = document.querySelector(".indiceID"); // constante pour rentrer l'ID d'une clé
+const keyText = document.querySelector(".key__main--text"); // constante pour rentrer la description d'une clé
+const keyImage = document.querySelector(".indiceImage"); // constante pour rentrer l'image' d'une clé
+const keyCount = document.querySelector(".key__footer--text");
 // script qui permet de passer à la clé suivante
 nextKey.addEventListener("click", () => {
   const keysChildSuivant = keysChilds[indexKey++ % keysChilds.length];
@@ -38,13 +40,18 @@ nextKey.addEventListener("click", () => {
     .then((response) => response.json())
     .then((data) => {
       // Les données JSON sont converties objet JavaScript
-      const idValue = data.keys[keysChildSuivant.textContent].id;
+      // const idValue = data.keys[keysChildSuivant.textContent].id;
       const textValue = data.keys[keysChildSuivant.textContent].indiceText;
+      const imageValue = data.keys[keysChildSuivant.textContent].image;
       // Les données sont injecter dans le HTML
-      keyTest.innerText = textValue;
+      keyID.innerText = indexKey;
+      keyText.innerText = textValue;
+      keyImage.src = imageValue;
+      keyCount.innerHTML = indexKey - 1;
     });
   // permet de désactiver le bouton lors de la dernière clé, permet
   if (indexKey >= 9) {
     nextKey.disabled = true;
+    nextKey.classList.add("grey");
   }
 });

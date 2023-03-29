@@ -1,8 +1,8 @@
 // Initialisation des constantes
 
-const index = document.getElementById("index"); // recuperer la div "index"
-const rules = document.getElementById("rules"); // recuperer la div "rules"
-const keysSection = document.getElementById("key"); // recuperer la section "key"
+const home = document.querySelector(".home"); // recuperer la section "home"
+const rules = document.querySelector(".rules"); // recuperer la section "rules"
+const keysSection = document.querySelector(".key"); // recuperer la section "key"
 const nextButton = document.getElementById("nextButton"); // recuperer le bouton permettant d'acceder à l'espace des clés
 const nextKey = document.getElementById("nextKey"); // recuperer le bouton permettant d'acceder à la clé suivante
 const scanButton = document.getElementById("readTag"); // bouton permettant d'accepter le lire les tags NFC
@@ -10,8 +10,14 @@ const keysNums = document.querySelector(".keys"); // div permettant de stocker t
 
 // script permettant d'activer la géolocalisation
 document.getElementById("askButton").addEventListener("click", function () {
-  index.style.display = "none";
+  home.style.display = "none";
   rules.style.display = "flex";
+});
+
+// script permettant d'accéder à la section des clés
+nextButton.addEventListener("click", function () {
+  rules.style.display = "none";
+  keysSection.style.display = "flex";
 });
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function (location) {
@@ -65,9 +71,3 @@ for (var i = 0; i < 5; i++) {
   keysNums.innerHTML += "<p>" + get_rand(MMInums) + "</p>";
   // console.log("MMI " + get_rand(MMInums));
 }
-
-// script permettant d'accéder à la section des clés
-nextButton.addEventListener("click", function () {
-  rules.style.display = "none";
-  keysSection.style.display = "flex";
-});
