@@ -80,6 +80,12 @@ main {
   background-color: transparent;
   transition: 0.2s;
 }
+.grey {
+  background-image: url(./../images/pixel-button-grey.svg);
+  padding: 10px 15px;
+  width: 205px;
+  height: 50px;
+}
 .rules_text {
   width: 90%;
   text-align: left;
@@ -136,8 +142,4 @@ main {
 .key__main--text {
   margin-bottom: 10px;
   margin-top: 5px;
-}
-.grey {
-  background-image: grey;
-  color: red;
 }

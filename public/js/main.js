@@ -27,27 +27,7 @@ if ("geolocation" in navigator) {
   // watchId = navigator.geolocation.watchPosition(appendLocation);
 }
 
-// script permettant d'acceder à la lecture des tags NFC
-scanButton.addEventListener("click", async () => {
-  if ("NDEFReader" in window) {
-    const ndef = new NDEFReader();
-    try {
-      await ndef.scan();
-      ndef.onreading = (event) => {
-        const decoder = new TextDecoder();
-        for (const record of event.message.records) {
-          console.log("Record type:  " + record.recordType);
-          console.log("MIME type:    " + record.mediaType);
-          console.log("=== data ===\n" + decoder.decode(record.data));
-        }
-      };
-    } catch (error) {
-      console.log(error);
-    }
-  } else {
-    console.log("Web NFC is not supported.");
-  }
-});
+
 
 //Génération des 5 clés (aléatoire sur les 8 existantes) à trouver dans le batiment MMI
 var MMInums = [0, 1, 2, 3, 4, 5, 6, 7];
