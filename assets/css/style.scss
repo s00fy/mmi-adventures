@@ -14,7 +14,7 @@ h1 {
   font-size: 2rem;
 }
 html {
-  background-image: url(./../images/background.svg);
+  background-image: url(/images/background.svg);
   background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
@@ -73,7 +73,7 @@ main {
   cursor: pointer;
   color: black;
   padding: 10px 15px;
-  background-image: url(./../images/pixel-button.svg);
+  background-image: url(/images/pixel-button.svg);
   background-size: cover;
   width: auto;
   font-family: "Retro Gaming";
@@ -87,7 +87,7 @@ main {
 }
 
 .grey {
-  background-image: url(./../images/pixel-button-grey.svg);
+  background-image: url(/images/pixel-button-grey.svg);
   padding: 10px 15px;
   width: 240px;
   height: 55px;
