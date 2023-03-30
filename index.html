@@ -13,34 +13,38 @@
     </header>
     <main>
       <section class="home">
-        <picture class="home_image" id="home">
+        <picture class="home__image" id="home">
           <img src="./assets/images/logo.png" alt="" />
         </picture>
-        <h2 class="home_title">Une aventure interactive</h2>
-        <button id="askButton" class="home_button">Commencer</button>
+        <h2 class="home__title">Une aventure interactive</h2>
+        <button id="askButton" class="home__button">Commencer</button>
       </section>
-      <section class="rules" style="display: none">
+      <section class="rules d-none">
         <h2>Pour cette aventure, activez les NFC.</h2>
-        <button class="rules_button" id="readTag">Activer</button>
-        <p class="rules_text">Dans cette folle aventure, vous devrez chercher 8 clés dans le vaste monde de l’IUT d’Angoulême.</p>
-        <p class="rules_text">Afin de trouver les clés, vous aurez un indices.</p>
-        <p class="rules_text">A quoi ressemble les clés ?</p>
-        <picture class="rules_image">
-          <img src="./assets/images/logo.png" alt="" />
+        <p class="rules__text">Dans cette folle aventure, vous devrez chercher 8 clés dans le vaste monde de l’IUT d’Angoulême.</p>
+        <p class="rules__text">Afin de trouver les clés, vous aurez un indices.</p>
+        <p class="rules__text--important">A quoi ressemble les clés ?</p>
+        <picture class="rules__image">
+          <img src="./assets/images/key-example.svg" alt="" />
         </picture>
-        <button id="nextButton" class="rules_button">Démarrer</button>
+        <button class="rules__button" id="readTag">Activer</button>
       </section>
-      <section class="key" id="key" style="display: none">
+      <section class="key d-none" id="key">
         <div class="key__main">
-          <h2 class="key__main--number">Clé numéro <span class="indiceID">0</span> :</h2>
-          <p class="key__main--text">Cliquez sur "clé suivante" pour démarrer</p>
-          <h2 class="key__main--indication">Indice :</h2>
-          <picture class="key__main--picture">
-            <img src="" alt="" class="indiceImage"/>
-          </picture>
+          <div class="key__mainInfos d-none">
+            <h2 class="key__main--number">Clé numéro <span class="indiceID">0</span> :</h2>
+            <p class="key__main--text">Cliquez sur "clé suivante" pour démarrer</p>
+            <h2 class="key__main--indication">Indice :</h2>
+            <picture class="key__main--picture">
+              <img src="" alt="" class="indiceImage" />
+            </picture>
+          </div>
           <div class="center">
-            <h3 class="key__main--distance">Vous êtes à <span>20 mètres<span></h3>
-            <button id="nextKey" class="key__main--button">Clé suivante</button>
+            <div>
+              <p id="timer"></p>
+              <p class="key__second__indication d-none"></p>
+            </div>
+            <button id="nextKey" class="key__main--button">Démarrer</button>
           </div>
         </div>
         <div class="key__footer">
@@ -49,9 +53,14 @@
           <p>/8</p>
         </div>
       </section>
+      <section class="treasure d-none">
+        <h2>Bravo à vous jeunes pirates !</h2>
+        <h3>Vous venez de récueperer toutes les clés, trouvez le trésors au coordonnées suivantes :</h3>
+        <h2>45.648266, 0.138335</h2>
+      </section>
     </main>
-    <footer class="keys" style="display: none"></footer>
-    <div class="NFCkey" style="display: none"></div>
+    <footer class="keys d-none"></footer>
+    <div class="NFCkey d-none"></div>
     <script src="/js/main.js"></script>
     <script src="/js/main2.js"></script>
   </body>
