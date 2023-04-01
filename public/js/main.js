@@ -9,8 +9,7 @@ const nextKey = document.getElementById("nextKey"); // recuperer le bouton perme
 const scanButton = document.getElementById("readTag"); // bouton permettant d'accepter le lire les tags NFC
 const keysNums = document.querySelector(".keys"); // div permettant de stocker tous les ID de clé
 
-
-// script permettant d'activer la géolocalisation
+// script permettant d'accéder à la section des règles
 document.getElementById("askButton").addEventListener("click", function () {
   home.classList.add("d-none");
   rules.classList.remove("d-none");
@@ -21,13 +20,6 @@ scanButton.addEventListener("click", function () {
   rules.classList.add("d-none");
   keysSection.classList.remove("d-none");
 });
-if ("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(function (location) {
-    // appendLocation(location, "fetched");
-  });
-
-  // watchId = navigator.geolocation.watchPosition(appendLocation);
-}
 
 //Génération des 5 clés (aléatoire sur les 8 existantes) à trouver dans le batiment MMI
 var MMInums = [0, 1, 2, 3, 4, 5, 6, 7];
