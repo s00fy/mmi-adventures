@@ -99,7 +99,6 @@ scanButton.addEventListener("click", async () => {
         const decoder = new TextDecoder();
         for (const record of event.message.records) {
           if (decoder.decode(record.data) === NFCkey.textContent) {
-            console.log("C'est la bonne clé");
             nextKey.disabled = false;
             nextKey.classList.remove("grey");
             nextKey.innerText = "Clé suivante";
