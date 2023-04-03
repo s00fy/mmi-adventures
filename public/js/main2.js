@@ -51,7 +51,6 @@ nextKey.addEventListener("click", () => {
         nextKey.disabled = true;
         nextKey.classList.add("grey");
         treasureSection.classList.remove("d-none");
-        keysSection.classList.add("d-none");
       } else {
         // Les données JSON sont converties objet JavaScript
         const idValue = data.keys[keysChildSuivant.textContent].id;

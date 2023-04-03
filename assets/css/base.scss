@@ -5,3 +5,18 @@
 @import "./sections/rules.scss";
 @import "./sections/key.scss";
 @import "./sections/treasure.scss";
+
+.d-none {
+  display: none;
+  transition: 0.2s;
+}
+
+@media (max-height: 500px) {
+  .home__image img {
+    margin-top: 20px;
+  }
+  .home__title {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+}
