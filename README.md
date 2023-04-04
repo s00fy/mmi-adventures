@@ -8,7 +8,7 @@ MMI Adventures est une application web qui a pour but de faire découvrir le bat
 
 ### 1- Les NFC
 
-Pour ce projet nous avions à choisir au minimum 1 technos présenté sur le site : [Flexbox Froggy](https://whatwebcando.today/)
+Pour ce projet nous avions à choisir au minimum 1 techno présenté sur le site : [What Web Can Do Today](https://whatwebcando.today/)
 
 Pourquoi prendre les NFC ? C'est une technologie qui peut être utilisé à la manière d'une vrai clé, elle permet d'ouvrir une porte et passer à la prochaine énigme. Cependant il y a certaine contrainte à utiliser cette technologie :
 
@@ -89,8 +89,34 @@ scanButton.addEventListener("click", async () => {
 });
 ```
 
+## Timer
+
+Afin de ne pas laisser les étudiants bloqué, si ils n'ont pas trouvé l'emplacement de la clé, la salle est révélé au bout des 3 minutes de timer.
+
 ## One Page
 
 Pour ce projet nous somme resté sur une seule et même page. En effet cela permet de tout charger à l'ouverture de la web app et dene pas avoir de ralentissement entre chaque actions.
 
 Pour cela il nous fallait utiliser un fichier .json où nous irions stocker toute les informations nécessaires de chaque clé (ID, nom de la salle/emplacement, indice texte, indice image).
+
+## Guide d'utilisation
+
+Afin d'utiliser la web app il vous faudra à disposition un téléphone :
+
+- permettant de lire et d'écrire sur des NFC
+- Google Chrome
+- l'application "NFC TOOLS"
+- un carte NFC vide
+
+#### Étape 1 : Écrire des données sur votre de carte NFC
+
+- Ouvrir l'application NFC Tools, aller dans la partie "ECRIRE", ajouter un enregistrement, texte et noter 1.
+- Répéter cette action 14 fois jusqu'à avoir les 14 clés nécesaire au fonctionnement de la web APP
+- Une fois fait, cliquez sur le bouton "Ecrire" et rapprochez votre carte NFC
+  (si vous avez plusieurs cartes, répartissez ces numéros sur plusieurs cartes)
+
+#### Étape 2 : S'amuser à passer toute les clés
+
+Oui c'était rapide ! Une fois sur le site [MMI Adventures](https://mmi-adventures.netlify.app/), suivez les instructions, activez les NFC et à vous de jouer, passez toutes les clés une à une pour découvrir les petites énigimes e atteindre le trésor !
+
+Bien sur cette web app est plus amusante sur le campus car il permet de se déplacer et faire une réelle chasse au trésor.
