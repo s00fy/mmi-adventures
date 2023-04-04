@@ -1,0 +1,32 @@
+.treasure {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.treasure__image img {
+  width: 300px;
+  height: auto;
+  margin-block: 2vh;
+}
+.treasure__title {
+  margin-top: 5vh;
+  margin-bottom: 1vh;
+  font-size: 1.5rem;
+  width: 90vw;
+}
+
+.treasure__text {
+  margin-top: 1vh;
+  font-size: 1rem;
+  width: 90vw;
+}
+
+.treasure__coords {
+  margin-top: 4vh;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  color: white;
+}

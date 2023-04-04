@@ -1,7 +1,6 @@
 // script permettant d'acceder à la lecture des tags NFC
 const NFCkey = document.querySelector(".NFCkey");
 let idValue = 1;
-let temps = 8;
 const timerElement = document.getElementById("timer");
 // même script que pour la génération des clés MMI, mais celui ci est pour les clé IUT
 var IUTnums = [8, 9, 10, 11, 12];
@@ -41,6 +40,8 @@ const salleElement = document.querySelector(".key__second__indication");
 // script qui permet de passer à la clé suivante
 const keyMain = document.querySelector(".key__mainInfos");
 nextKey.addEventListener("click", () => {
+  salleElement.classList.add("d-none");
+  temps = 180;
   keyMain.classList.remove("d-none");
   const keysChildSuivant = keysChilds[indexKey++ % keysChilds.length];
   // script qui récupère les données dans le fichier .json et les injecte dans le HTML
@@ -55,7 +56,6 @@ nextKey.addEventListener("click", () => {
       } else {
         // Les données JSON sont converties objet JavaScript
         const idValue = data.keys[keysChildSuivant.textContent].id;
-        // const keyNFC = decoder.decode(record.data);
         const textValue = data.keys[keysChildSuivant.textContent].indiceText;
         const imageValue = data.keys[keysChildSuivant.textContent].image;
         const salle = data.keys[keysChildSuivant.textContent].salle;
@@ -74,7 +74,8 @@ nextKey.addEventListener("click", () => {
       nextKey.classList.add("grey");
       nextKey.disabled = true;
       nextKey.innerText = "Clé manquante";
-      setInterval(() => {
+      clearInterval(timer);
+      timer = setInterval(() => {
         let minutes = parseInt(temps / 60, 10);
         let secondes = parseInt(temps % 60, 10);
 
@@ -83,7 +84,8 @@ nextKey.addEventListener("click", () => {
 
         timerElement.innerText = `${minutes}:${secondes}`;
         temps = temps <= 0 ? 0 : temps - 1;
-        if (temps === 0) {
+        let end = 0;
+        if (temps === end) {
           salleElement.classList.remove("d-none");
         }
       }, 1000);
@@ -99,7 +101,6 @@ scanButton.addEventListener("click", async () => {
         const decoder = new TextDecoder();
         for (const record of event.message.records) {
           if (decoder.decode(record.data) === NFCkey.textContent) {
-            console.log("C'est la bonne clé");
             nextKey.disabled = false;
             nextKey.classList.remove("grey");
             nextKey.innerText = "Clé suivante";
