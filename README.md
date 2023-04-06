@@ -2,7 +2,7 @@
 
 # MMI Adventures
 
-MMI Adventures est une application web qui a pour but de faire découvrir le batiment MMI Angouême ainsi que l'enceinte de l'IUT de manière ludique aux premières années dès leur arrivé à l'IUT. Afin de rendre cette tâche amusante, nous avons fait un parcours de chasse au trésor où les élèves devront résoudre les petites énigmes afin de trouver dans un premier temps les salles, et ensuite les cartes NFC qui permettront de passer à la prochaine clé.
+MMI Adventures est une application web qui a pour but de faire découvrir le batiment MMI Angoulême ainsi que l'enceinte de l'IUT de manière ludique aux premières années dès leur arrivée à l'IUT. Afin de rendre cette tâche amusante, nous avons fait un parcours de chasse au trésor où les élèves devront résoudre les petites énigmes afin de trouver dans un premier temps les salles, et ensuite les cartes NFC qui permettront de passer à la prochaine clé.
 
 ## Technos utilisées
 
